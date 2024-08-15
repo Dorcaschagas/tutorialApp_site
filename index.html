@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://unpkg.com/intro.js/minified/introjs.min.css">
+</head>
+
+<body>
+    <button id="feature1" data-intro="This is the first feature."
+        data-step="1">Feature 1</button>
+    <button id="feature2" data-intro="This is the second feature."
+        data-step="2">Feature 2</button>
+
+    <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            introJs().start();
+        });
+        introJs().setOptions({
+            steps: [
+                {
+                    element: '#feature1',
+                    intro: 'This is the first feature.',
+                    position: 'right'
+                },
+                {
+                    element: '#feature2',
+                    intro: 'This is the second feature.',
+                    position: 'left'
+                }
+                // Adicione mais passos conforme necessário
+            ]
+        }).start();
+
+    </script>
+</body>
+
+</html>
